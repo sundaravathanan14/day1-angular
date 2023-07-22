@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
+tiffin : string ='dosa';
+fromChild(item:string){
+  this.tiffin = item;
+}
 }
