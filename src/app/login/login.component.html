@@ -1,3 +1,16 @@
 
-<button (click)="changeName('Theeran')">change</button>
+<button (click)="changeName('Theeran')" style="color:red">change</button>
 <a routerLink="/signup">click</a>
+
+<button (click)="navigate()">Navigate to register component</button>
+
+<!--Structural directives-->
+<p *ngIf="show">This is a Structural directive</p>
+<button (click)="show=!show">Show</button>
+
+<!--for(i=0;i<10;i++)-->
+<p *ngFor="let item of items;let i=index">{{item}}-{{i}}</p>
+<ul>
+    <li *ngFor="let student of students;let i=index">{{student.id}}--{{student.name}}--{{student.class}}</li>
+    
+</ul>
