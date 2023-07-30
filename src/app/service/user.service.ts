@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class UserService {
-
+  getName:string ='Tamilini';
   constructor() { }
+
+  setName(name:string){
+    this.getName = name;
+    console.log(this.getName);
+  }
 }

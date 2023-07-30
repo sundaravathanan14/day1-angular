@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-register',
@@ -6,11 +7,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent  {
-  @Input() toChild :string='';
-  @Output() menu = new EventEmitter<string>();
-
-  changeMenu(){
-    this.menu.emit('idly');
-  }
-
+  constructor(public userService:UserService){}
+  
 }
